@@ -1,0 +1,26 @@
+<h1>Project listing page</h1>
+
+<table>
+   <thead>
+     <tr>
+     <th>Title</th>
+     <th>Description</th>
+     <th>Actions</th>
+     </tr>
+   </thead>
+
+   <tbody>
+   <% @project2.each do |project2|%>
+     <tr>
+      <td><%= project.title %></td>
+      <td><%= project.escription %></td>
+      <td><%= link_to 'Edit', edit_project2_path(project2) %></td>
+      <td><%= link_to 'Delete', project2_path(project2), method: :delete,  data: {confirm: "Are you sure?" }%></td>
+     </tr>
+   <% end %>
+   </tbody>
+</table>
+
+<p>
+<%= link_to 'Create new project2', new_project2_path %>
+</p>

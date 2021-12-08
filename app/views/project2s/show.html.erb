@@ -1,0 +1,8 @@
+<h1>Showing project2 details</h1>
+
+<p><strong>title: </strong><%= @project2.title %></p>
+<p><strong>description: </strong><%= @project2.description%></p>
+
+<%= link_to 'Edit', edit_project2_path(@project2)%> |
+<%= link_to 'Delete', project2_path(@project2), method: :delete, data: {confirm: "Are you sure?" } %> |
+<%= link_to 'Return to project2 listing', project2_path%>
